@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Fragmentation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: darkgray;
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer_wrapper {
+            background-color: #fff;
+            width: 60%;
+            margin: 0 auto;
+            border: 2px solid black;
+            border-top: none;
+            border-bottom: none;
+        
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #efefef;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+        }
+
+        .wrapper {
+            background-color: gray;
+
+        }
+
+        .nav {
+            background-color: #fff;
+            height: 100vh;
+            width: 25%;
+            float: right;
+
+        }
+
+        .nav ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .nva ul li {
+            list-style-type: none;
+            display: block;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-family: tahoma;
+            font-size: 14px;
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .nav ul li a:hover {
+            background-color: cadetblue;
+        }
+
+        section {
+            background-color: #fff;
+            min-height: 300px;
+            width: 75%;
+            float: left;
+            padding: 5px;
+            border-right: 2px solid #eee;
+        }
+
+        footer {
+            clear: both;
+            background-color: lightgray;
+            height: 50px;
+            text-align: center;
+            font-size: small;
+            color: gray;
+            line-height: 50px;
+        }
+
+        .news {
+            border: 1px solid lightskyblue;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            align-content: space-between;
+        }
+
+        .news:hover{
+            background-color: #ddd;
+            cursor: pointer;
+        }
+        .news p{
+            display: inline-block;
+        }
+
+        .news .image{
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .btn{
+            background-color: red;
+            color: #fff;
+            display: inline-block;
+            text-decoration: none;
+            padding: 3px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer_wrapper">
+        
+        <header>Digi<span style="color:red">kala</span></header>
+        <div class="wrapper">
+            <div class="nav">
+                <ul>
+                    <li><a href="">صفحه اصلی</a></li>
+                    <li><a href="">دسته بندی</a></li>
+                    <li><a href="">محصولات</a></li>
+                    <li><a href="">شرایط و قوانین</a></li>
+                    <li><a href="">درباره ما</a></li>
+                </ul>
+            </div>
+            <section>
+                <div class="news">
+                    <div class="image"><img src="images/device-android-legacyphone1.jpg" alt=""></div>
+                    <p>ایفون 16 پرو </p>
+                        <p><a href="" class="btn btn-buy">افزودن به سبد خرید</a></p>
+                </div>
+                <div class="news">
+                    <div class="image"><img src="images/device-android-legacytablet1.jpg" alt=""></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, expedita vel pariatur sapiente
+                        mollitia asperiores similique quas nobis ratione odio eum optio eveniet magni! Optio quae enim
+                        esse quidem ea!</p>
+                        <p><a href="" class="btn btn-buy">افزودن به سبد خرید</a></p>
+                </div>
+                <div class="news">
+                    <div class="image"><img src="images/device-android-modernphone1.jpg" alt=""></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, expedita vel pariatur sapiente
+                        mollitia asperiores similique quas nobis ratione odio eum optio eveniet magni! Optio quae enim
+                        esse quidem ea!</p>
+                        <p><a href="" class="btn btn-buy">افزودن به سبد خرید</a></p>
+                </div>
+                <div class="news">
+                    <div class="image"><img src="images/device-apple-ipad.jpg" alt=""></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, expedita vel pariatur sapiente
+                        mollitia asperiores similique quas nobis ratione odio eum optio eveniet magni! Optio quae enim
+                        esse quidem ea!</p>
+                        <p><a href="" class="btn btn-buy">افزودن به سبد خرید</a></p>
+                </div>
+                <div class="news">
+                    <div class="image"><img src="images/device-android-legacyphone1.jpg" alt=""></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, expedita vel pariatur sapiente
+                        mollitia asperiores similique quas nobis ratione odio eum optio eveniet magni! Optio quae enim
+                        esse quidem ea!</p>
+                        <p><a href="" class="btn btn-buy">افزودن به سبد خرید</a></p>
+                </div>
+                <div class="news">
+                    <div class="image"><img src="images/device-android-moderntablet1.jpg" alt=""></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, expedita vel pariatur sapiente
+                        mollitia asperiores similique quas nobis ratione odio eum optio eveniet magni! Optio quae enim
+                        esse quidem ea!</p>
+                        <p><a href="" class="btn btn-buy">افزودن به سبد خرید</a></p>
+                </div>
+                
+            </section>
+        </div>
+        <footer>کلیه حقوق مادی و معنوی این سایت محفوظ میباشد</footer>
+    </div>
+</body>
+
+</html>
